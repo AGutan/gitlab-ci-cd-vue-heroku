@@ -1,0 +1,18 @@
+image: node:15
+
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  script:
+    - yarn install
+    - yarn test
+
+deploy:
+  stage: deploy
+  script:
+    - git push https://$HEROKU_USER:$HEROKU_API_KEY@git.heroku.com/vue-cicd.git HEAD:refs/heads/master
+  only:
+    - master
