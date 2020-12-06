@@ -1,4 +1,4 @@
-# vue-cicd
+# Gitlab CI/CD VueJS Heroku
 
 ## Project setup
 ```
